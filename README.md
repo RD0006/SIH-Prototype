@@ -55,6 +55,10 @@ plate-recognition engine: architecture, why each model was chosen over the
 alternatives, measured accuracy, and — importantly — the conditions under which
 it has *not* been tested.
 
+[`docs/camera-sources.md`](docs/camera-sources.md) is the source research: which
+public camera providers were tested, which cleared authorisation, and why most
+did not — including the honest finding on India.
+
 [`docs/camera-library.md`](docs/camera-library.md) covers the authorised public
 camera registry: the authorisation boundary, the provider-adapter architecture,
 and the first integrated provider.
