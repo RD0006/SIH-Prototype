@@ -12,6 +12,15 @@ dist
 dist-ssr
 *.local
 
+# Environment — never commit real values; commit .env.example instead
+.env
+.env.*
+!.env.example
+
+# Caches
+.vite
+.eslintcache
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -22,3 +31,38 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Vendored AI assets — regenerate with `npm run fetch:models`
+public/models
+src/vendor/ort
+
+# Evaluation working files — crops and extracted frames are regenerable
+eval/dataset/.score
+eval/dataset/.frames
+eval/dataset/.sheet*
+eval/dataset/.big
+eval/dataset/.mid
+eval/dataset/.last
+# Evaluation footage is large. The one clip the labelled dataset depends on is
+# committed so `npm run eval` is reproducible from a clean clone; the rest of
+# the library is not, and is re-fetchable from eval/footage/SOURCES.md.
+eval/footage/*
+!eval/footage/junction-1080-full.mp4
+!eval/footage/SOURCES.md
+
+# The raw corpus is gigabytes of video and is never committed, but its
+# provenance is: manifests record every source URL, author and licence, so the
+# corpus can be rebuilt and its licensing audited without the media itself.
+# Git cannot re-include a file inside an excluded directory, so each level of
+# the path has to be re-admitted explicitly.
+!eval/footage/corpus/
+eval/footage/corpus/*
+!eval/footage/corpus/README.md
+!eval/footage/corpus/size.sh
+!eval/footage/corpus/*/
+eval/footage/corpus/*/*
+!eval/footage/corpus/*/MANIFEST.md
+
+# Contact sheets used for hand-labelling — scratch, regenerable
+eval/dataset/sheet-*.png
+eval/dataset/pending.json

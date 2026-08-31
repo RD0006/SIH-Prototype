@@ -1,12 +1,66 @@
-# React + Vite
+# IBVAP — Intelligent Border Video Analytics Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Turns existing, ordinary CCTV into an intelligent surveillance network — in
+software, with no new hardware. Built for **SIH26187** (Ministry of Home Affairs
+/ Sashastra Seema Bal).
 
-Currently, two official plugins are available:
+A real object-detection network runs **in the browser** against standard video
+feeds and produces tracked identities, virtual-fence intrusion alerts,
+explainable threat scores, number-plate reads and filable evidence packages.
+No server, no GPU appliance, no smart cameras, and no internet at runtime.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Run it
 
-## Expanding the ESLint configuration
+```bash
+npm ci
+npm run fetch:models
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+`fetch:models` vendors the detection weights, the ONNX WASM runtime and the
+tesseract OCR assets into the project so the console runs fully offline. It
+needs network access once; after that the network cable can come out. Skipping
+it leaves the console working but permanently in labelled replay mode.
+
+Requires Node.js 20.19+ or 22.12+.
+
+## Layout
+
+| Path | Contents |
+| --- | --- |
+| `src/main.jsx` | Entry point and route definitions |
+| `src/App.jsx` | Layout shell — sidebar, header, page outlet |
+| `src/pages/` | One component per route |
+| `src/components/` | `layout/`, `dashboard/`, `surveillance/`, `incidents/`, `evidence/`, `system/`, `tracking/` |
+| `src/lib/detection/` | Model loading, low-light enhancement, replay fallback |
+| `src/lib/analytics/` | Domain classes, geometry, tracker, threat scoring |
+| `src/lib/alpr/` | The plate-recognition engine — detection, quality gating, recognition, validation, aggregation |
+| `eval/` | Evaluation harness, hand-labelled ground truth, parameter sweeps |
+| `src/hooks/useAnalytics.js` | The analytics loop that ties them together |
+| `src/context/` | Shared platform state |
+| `src/data/` | Camera estate, virtual fences, seeded incidents, identities |
+| `scripts/fetch-models.mjs` | Vendors all offline assets |
+| `public/footage/` | Demo clips — see `CREDITS.md` for sources and licences |
+
+## Scope, honesty and the demo script
+
+[`docs/prototype.md`](docs/prototype.md) records what genuinely runs, what is
+sample data, the measured performance numbers, and a step-by-step demonstration
+flow. Read it before demonstrating.
+
+[`docs/core-engine.md`](docs/core-engine.md) is the readiness report for the
+plate-recognition engine: architecture, why each model was chosen over the
+alternatives, measured accuracy, and — importantly — the conditions under which
+it has *not* been tested.
+
+## Checks
+
+```bash
+npm run lint && npm run build
+```
+
+Engine accuracy, against hand-labelled ground truth:
+
+```bash
+npm run eval && npm run eval:vehicles
+```

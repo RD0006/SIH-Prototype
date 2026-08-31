@@ -1,0 +1,1600 @@
+[
+  {
+    "id": "easy-01-skyline-rear-plate_t0.31_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 0.31,
+    "box": {
+      "x1": 866,
+      "y1": 382,
+      "x2": 1338,
+      "y2": 704
+    },
+    "plateWidthPx": 472,
+    "detectorScore": 0.884,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t0.31_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t0.93_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 0.93,
+    "box": {
+      "x1": 900,
+      "y1": 404,
+      "x2": 1347,
+      "y2": 694
+    },
+    "plateWidthPx": 448,
+    "detectorScore": 0.909,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t0.93_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t1.54_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 1.54,
+    "box": {
+      "x1": 918,
+      "y1": 416,
+      "x2": 1354,
+      "y2": 699
+    },
+    "plateWidthPx": 436,
+    "detectorScore": 0.897,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t1.54_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t2.16_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 2.16,
+    "box": {
+      "x1": 951,
+      "y1": 432,
+      "x2": 1368,
+      "y2": 696
+    },
+    "plateWidthPx": 416,
+    "detectorScore": 0.909,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t2.16_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t2.78_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 2.78,
+    "box": {
+      "x1": 984,
+      "y1": 450,
+      "x2": 1375,
+      "y2": 694
+    },
+    "plateWidthPx": 391,
+    "detectorScore": 0.895,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t2.78_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t3.40_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 3.4,
+    "box": {
+      "x1": 1022,
+      "y1": 469,
+      "x2": 1395,
+      "y2": 699
+    },
+    "plateWidthPx": 372,
+    "detectorScore": 0.903,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t3.40_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t4.01_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 4.01,
+    "box": {
+      "x1": 1048,
+      "y1": 484,
+      "x2": 1398,
+      "y2": 694
+    },
+    "plateWidthPx": 350,
+    "detectorScore": 0.896,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t4.01_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t4.63_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 4.63,
+    "box": {
+      "x1": 1059,
+      "y1": 491,
+      "x2": 1391,
+      "y2": 683
+    },
+    "plateWidthPx": 332,
+    "detectorScore": 0.901,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t4.63_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t5.25_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 5.25,
+    "box": {
+      "x1": 1070,
+      "y1": 502,
+      "x2": 1389,
+      "y2": 684
+    },
+    "plateWidthPx": 319,
+    "detectorScore": 0.904,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t5.25_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t5.86_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 5.86,
+    "box": {
+      "x1": 1085,
+      "y1": 513,
+      "x2": 1389,
+      "y2": 686
+    },
+    "plateWidthPx": 304,
+    "detectorScore": 0.909,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t5.86_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t6.48_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 6.48,
+    "box": {
+      "x1": 1097,
+      "y1": 515,
+      "x2": 1390,
+      "y2": 683
+    },
+    "plateWidthPx": 293,
+    "detectorScore": 0.907,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t6.48_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t7.10_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 7.1,
+    "box": {
+      "x1": 1105,
+      "y1": 507,
+      "x2": 1388,
+      "y2": 676
+    },
+    "plateWidthPx": 283,
+    "detectorScore": 0.915,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t7.10_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t7.72_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 7.72,
+    "box": {
+      "x1": 1104,
+      "y1": 510,
+      "x2": 1382,
+      "y2": 682
+    },
+    "plateWidthPx": 278,
+    "detectorScore": 0.926,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t7.72_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t8.33_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 8.33,
+    "box": {
+      "x1": 1101,
+      "y1": 524,
+      "x2": 1372,
+      "y2": 691
+    },
+    "plateWidthPx": 271,
+    "detectorScore": 0.929,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t8.33_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t8.95_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 8.95,
+    "box": {
+      "x1": 1093,
+      "y1": 538,
+      "x2": 1358,
+      "y2": 710
+    },
+    "plateWidthPx": 265,
+    "detectorScore": 0.927,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t8.95_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t9.57_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 9.57,
+    "box": {
+      "x1": 1089,
+      "y1": 551,
+      "x2": 1347,
+      "y2": 721
+    },
+    "plateWidthPx": 258,
+    "detectorScore": 0.916,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t9.57_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t10.19_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 10.19,
+    "box": {
+      "x1": 1093,
+      "y1": 571,
+      "x2": 1344,
+      "y2": 740
+    },
+    "plateWidthPx": 250,
+    "detectorScore": 0.911,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t10.19_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t10.80_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 10.8,
+    "box": {
+      "x1": 1103,
+      "y1": 586,
+      "x2": 1345,
+      "y2": 753
+    },
+    "plateWidthPx": 242,
+    "detectorScore": 0.883,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t10.80_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t11.42_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 11.42,
+    "box": {
+      "x1": 1116,
+      "y1": 600,
+      "x2": 1354,
+      "y2": 762
+    },
+    "plateWidthPx": 239,
+    "detectorScore": 0.913,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t11.42_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-01-skyline-rear-plate_t12.04_p0",
+    "clip": "eval/footage/easy-01-skyline-rear-plate.mp4",
+    "time": 12.04,
+    "box": {
+      "x1": 1131,
+      "y1": 612,
+      "x2": 1362,
+      "y2": 773
+    },
+    "plateWidthPx": 231,
+    "detectorScore": 0.89,
+    "crop": "eval/dataset/crops/easy-01-skyline-rear-plate_t12.04_p0.jpg",
+    "groundTruth": "BR45IL",
+    "legible": true,
+    "notes": "",
+    "split": "holdout",
+    "acceptable": [
+      "BR45IL",
+      "BR451L"
+    ],
+    "ambiguous": "6th glyph is a bare vertical bar; I and 1 are identical in this typeface"
+  },
+  {
+    "id": "easy-02-carpark-daylight_t10.88_p0",
+    "clip": "eval/footage/easy-02-carpark-daylight.mp4",
+    "time": 10.88,
+    "box": {
+      "x1": 29,
+      "y1": 658,
+      "x2": 129,
+      "y2": 721
+    },
+    "plateWidthPx": 100,
+    "detectorScore": 0.863,
+    "crop": "eval/dataset/crops/easy-02-carpark-daylight_t10.88_p0.jpg",
+    "groundTruth": "BSL8607",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "easy-02-carpark-daylight_t11.63_p0",
+    "clip": "eval/footage/easy-02-carpark-daylight.mp4",
+    "time": 11.63,
+    "box": {
+      "x1": 203,
+      "y1": 636,
+      "x2": 302,
+      "y2": 694
+    },
+    "plateWidthPx": 99,
+    "detectorScore": 0.838,
+    "crop": "eval/dataset/crops/easy-02-carpark-daylight_t11.63_p0.jpg",
+    "groundTruth": "BSL8607",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "easy-02-carpark-daylight_t12.38_p0",
+    "clip": "eval/footage/easy-02-carpark-daylight.mp4",
+    "time": 12.38,
+    "box": {
+      "x1": 383,
+      "y1": 629,
+      "x2": 482,
+      "y2": 688
+    },
+    "plateWidthPx": 99,
+    "detectorScore": 0.832,
+    "crop": "eval/dataset/crops/easy-02-carpark-daylight_t12.38_p0.jpg",
+    "groundTruth": "BSL8607",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "easy-02-carpark-daylight_t13.13_p0",
+    "clip": "eval/footage/easy-02-carpark-daylight.mp4",
+    "time": 13.13,
+    "box": {
+      "x1": 584,
+      "y1": 628,
+      "x2": 680,
+      "y2": 684
+    },
+    "plateWidthPx": 96,
+    "detectorScore": 0.839,
+    "crop": "eval/dataset/crops/easy-02-carpark-daylight_t13.13_p0.jpg",
+    "groundTruth": "BSL8607",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "easy-02-carpark-daylight_t13.88_p0",
+    "clip": "eval/footage/easy-02-carpark-daylight.mp4",
+    "time": 13.88,
+    "box": {
+      "x1": 730,
+      "y1": 577,
+      "x2": 826,
+      "y2": 634
+    },
+    "plateWidthPx": 96,
+    "detectorScore": 0.84,
+    "crop": "eval/dataset/crops/easy-02-carpark-daylight_t13.88_p0.jpg",
+    "groundTruth": "BSL8607",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "easy-02-carpark-daylight_t14.63_p0",
+    "clip": "eval/footage/easy-02-carpark-daylight.mp4",
+    "time": 14.63,
+    "box": {
+      "x1": 875,
+      "y1": 572,
+      "x2": 969,
+      "y2": 630
+    },
+    "plateWidthPx": 95,
+    "detectorScore": 0.851,
+    "crop": "eval/dataset/crops/easy-02-carpark-daylight_t14.63_p0.jpg",
+    "groundTruth": "BSL8607",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t0.38_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 0.38,
+    "box": {
+      "x1": 803,
+      "y1": 341,
+      "x2": 906,
+      "y2": 377
+    },
+    "plateWidthPx": 103,
+    "detectorScore": 0.347,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t0.38_p0.jpg",
+    "groundTruth": "EK58HGG",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t1.13_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 1.13,
+    "box": {
+      "x1": 752,
+      "y1": 343,
+      "x2": 847,
+      "y2": 379
+    },
+    "plateWidthPx": 95,
+    "detectorScore": 0.41,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t1.13_p0.jpg",
+    "groundTruth": "EK58HGG",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t1.88_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 1.88,
+    "box": {
+      "x1": 2001,
+      "y1": 339,
+      "x2": 2237,
+      "y2": 406
+    },
+    "plateWidthPx": 236,
+    "detectorScore": 0.832,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t1.88_p0.jpg",
+    "groundTruth": "LR56SLV",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t2.63_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 2.63,
+    "box": {
+      "x1": 1562,
+      "y1": 352,
+      "x2": 1736,
+      "y2": 396
+    },
+    "plateWidthPx": 174,
+    "detectorScore": 0.638,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t2.63_p0.jpg",
+    "groundTruth": "LR56SLV",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t3.38_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 3.38,
+    "box": {
+      "x1": 1275,
+      "y1": 356,
+      "x2": 1427,
+      "y2": 402
+    },
+    "plateWidthPx": 152,
+    "detectorScore": 0.451,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t3.38_p0.jpg",
+    "groundTruth": "LR56SLV",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t4.13_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 4.13,
+    "box": {
+      "x1": 1061,
+      "y1": 353,
+      "x2": 1187,
+      "y2": 394
+    },
+    "plateWidthPx": 127,
+    "detectorScore": 0.615,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t4.13_p0.jpg",
+    "groundTruth": "LR56SLV",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t4.88_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 4.88,
+    "box": {
+      "x1": 1801,
+      "y1": 200,
+      "x2": 2032,
+      "y2": 268
+    },
+    "plateWidthPx": 231,
+    "detectorScore": 0.807,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t4.88_p0.jpg",
+    "groundTruth": "BV08HGU",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t5.63_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 5.63,
+    "box": {
+      "x1": 1391,
+      "y1": 238,
+      "x2": 1569,
+      "y2": 290
+    },
+    "plateWidthPx": 178,
+    "detectorScore": 0.763,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t5.63_p0.jpg",
+    "groundTruth": "BV08HGU",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t5.63_p1",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 5.63,
+    "box": {
+      "x1": 312,
+      "y1": 186,
+      "x2": 482,
+      "y2": 242
+    },
+    "plateWidthPx": 169,
+    "detectorScore": 0.503,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t5.63_p1.jpg",
+    "groundTruth": "DX17ODC",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t7.13_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 7.13,
+    "box": {
+      "x1": 975,
+      "y1": 284,
+      "x2": 1083,
+      "y2": 323
+    },
+    "plateWidthPx": 107,
+    "detectorScore": 0.64,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t7.13_p0.jpg",
+    "groundTruth": "BV08HGU",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t7.88_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 7.88,
+    "box": {
+      "x1": 2204,
+      "y1": 125,
+      "x2": 2447,
+      "y2": 210
+    },
+    "plateWidthPx": 243,
+    "detectorScore": 0.805,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t7.88_p0.jpg",
+    "groundTruth": "KP66FSA",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t8.63_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 8.63,
+    "box": {
+      "x1": 1621,
+      "y1": 199,
+      "x2": 1785,
+      "y2": 250
+    },
+    "plateWidthPx": 163,
+    "detectorScore": 0.55,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t8.63_p0.jpg",
+    "groundTruth": "KP66FSA",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t9.38_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 9.38,
+    "box": {
+      "x1": 311,
+      "y1": 186,
+      "x2": 475,
+      "y2": 240
+    },
+    "plateWidthPx": 164,
+    "detectorScore": 0.53,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t9.38_p0.jpg",
+    "groundTruth": "DX17ODC",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t10.14_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 10.14,
+    "box": {
+      "x1": 308,
+      "y1": 183,
+      "x2": 477,
+      "y2": 245
+    },
+    "plateWidthPx": 169,
+    "detectorScore": 0.696,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t10.14_p0.jpg",
+    "groundTruth": "DX17ODC",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t10.89_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 10.89,
+    "box": {
+      "x1": 308,
+      "y1": 188,
+      "x2": 475,
+      "y2": 244
+    },
+    "plateWidthPx": 168,
+    "detectorScore": 0.458,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t10.89_p0.jpg",
+    "groundTruth": "DX17ODC",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t11.64_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 11.64,
+    "box": {
+      "x1": 798,
+      "y1": 283,
+      "x2": 881,
+      "y2": 320
+    },
+    "plateWidthPx": 84,
+    "detectorScore": 0.47,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t11.64_p0.jpg",
+    "groundTruth": "KP66FSA",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t13.14_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 13.14,
+    "box": {
+      "x1": 304,
+      "y1": 186,
+      "x2": 476,
+      "y2": 240
+    },
+    "plateWidthPx": 172,
+    "detectorScore": 0.642,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t13.14_p0.jpg",
+    "groundTruth": "DX17ODC",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t13.89_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 13.89,
+    "box": {
+      "x1": 302,
+      "y1": 189,
+      "x2": 475,
+      "y2": 243
+    },
+    "plateWidthPx": 172,
+    "detectorScore": 0.396,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t13.89_p0.jpg",
+    "groundTruth": "DX17ODC",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-01-night-rain-junction_t14.64_p0",
+    "clip": "eval/footage/hard-01-night-rain-junction.mp4",
+    "time": 14.64,
+    "box": {
+      "x1": 305,
+      "y1": 190,
+      "x2": 476,
+      "y2": 243
+    },
+    "plateWidthPx": 171,
+    "detectorScore": 0.703,
+    "crop": "eval/dataset/crops/hard-01-night-rain-junction_t14.64_p0.jpg",
+    "groundTruth": "DX17ODC",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t0.93_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 0.93,
+    "box": {
+      "x1": 245,
+      "y1": 555,
+      "x2": 507,
+      "y2": 687
+    },
+    "plateWidthPx": 262,
+    "detectorScore": 0.838,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t0.93_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t1.55_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 1.55,
+    "box": {
+      "x1": 244,
+      "y1": 554,
+      "x2": 506,
+      "y2": 684
+    },
+    "plateWidthPx": 262,
+    "detectorScore": 0.827,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t1.55_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t2.17_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 2.17,
+    "box": {
+      "x1": 243,
+      "y1": 543,
+      "x2": 507,
+      "y2": 682
+    },
+    "plateWidthPx": 264,
+    "detectorScore": 0.789,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t2.17_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t2.79_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 2.79,
+    "box": {
+      "x1": 242,
+      "y1": 544,
+      "x2": 506,
+      "y2": 677
+    },
+    "plateWidthPx": 264,
+    "detectorScore": 0.852,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t2.79_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t3.41_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 3.41,
+    "box": {
+      "x1": 244,
+      "y1": 544,
+      "x2": 506,
+      "y2": 674
+    },
+    "plateWidthPx": 263,
+    "detectorScore": 0.854,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t3.41_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t4.03_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 4.03,
+    "box": {
+      "x1": 245,
+      "y1": 544,
+      "x2": 505,
+      "y2": 671
+    },
+    "plateWidthPx": 261,
+    "detectorScore": 0.855,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t4.03_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t4.65_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 4.65,
+    "box": {
+      "x1": 247,
+      "y1": 536,
+      "x2": 513,
+      "y2": 667
+    },
+    "plateWidthPx": 266,
+    "detectorScore": 0.861,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t4.65_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t5.28_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 5.28,
+    "box": {
+      "x1": 249,
+      "y1": 536,
+      "x2": 512,
+      "y2": 668
+    },
+    "plateWidthPx": 263,
+    "detectorScore": 0.869,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t5.28_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t5.90_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 5.9,
+    "box": {
+      "x1": 244,
+      "y1": 534,
+      "x2": 509,
+      "y2": 670
+    },
+    "plateWidthPx": 265,
+    "detectorScore": 0.871,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t5.90_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t6.52_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 6.52,
+    "box": {
+      "x1": 244,
+      "y1": 536,
+      "x2": 507,
+      "y2": 666
+    },
+    "plateWidthPx": 262,
+    "detectorScore": 0.876,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t6.52_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t7.14_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 7.14,
+    "box": {
+      "x1": 244,
+      "y1": 539,
+      "x2": 506,
+      "y2": 663
+    },
+    "plateWidthPx": 262,
+    "detectorScore": 0.874,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t7.14_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t7.76_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 7.76,
+    "box": {
+      "x1": 239,
+      "y1": 535,
+      "x2": 505,
+      "y2": 667
+    },
+    "plateWidthPx": 267,
+    "detectorScore": 0.792,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t7.76_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t8.38_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 8.38,
+    "box": {
+      "x1": 240,
+      "y1": 530,
+      "x2": 509,
+      "y2": 662
+    },
+    "plateWidthPx": 268,
+    "detectorScore": 0.856,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t8.38_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t9.00_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 9,
+    "box": {
+      "x1": 242,
+      "y1": 530,
+      "x2": 508,
+      "y2": 659
+    },
+    "plateWidthPx": 266,
+    "detectorScore": 0.872,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t9.00_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t9.62_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 9.62,
+    "box": {
+      "x1": 243,
+      "y1": 531,
+      "x2": 506,
+      "y2": 657
+    },
+    "plateWidthPx": 264,
+    "detectorScore": 0.873,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t9.62_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t10.24_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 10.24,
+    "box": {
+      "x1": 243,
+      "y1": 531,
+      "x2": 507,
+      "y2": 657
+    },
+    "plateWidthPx": 264,
+    "detectorScore": 0.871,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t10.24_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t10.86_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 10.86,
+    "box": {
+      "x1": 243,
+      "y1": 530,
+      "x2": 506,
+      "y2": 656
+    },
+    "plateWidthPx": 263,
+    "detectorScore": 0.87,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t10.86_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t11.48_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 11.48,
+    "box": {
+      "x1": 242,
+      "y1": 528,
+      "x2": 506,
+      "y2": 655
+    },
+    "plateWidthPx": 265,
+    "detectorScore": 0.854,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t11.48_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "hard-02-night-rear-plate_t12.10_p0",
+    "clip": "eval/footage/hard-02-night-rear-plate.mp4",
+    "time": 12.1,
+    "box": {
+      "x1": 242,
+      "y1": 528,
+      "x2": 507,
+      "y2": 656
+    },
+    "plateWidthPx": 265,
+    "detectorScore": 0.853,
+    "crop": "eval/dataset/crops/hard-02-night-rear-plate_t12.10_p0.jpg",
+    "groundTruth": "JNL904",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "medium-01-crosswalk-approach_t3.38_p0",
+    "clip": "eval/footage/medium-01-crosswalk-approach.mp4",
+    "time": 3.38,
+    "box": {
+      "x1": 1034,
+      "y1": 504,
+      "x2": 1078,
+      "y2": 525
+    },
+    "plateWidthPx": 45,
+    "detectorScore": 0.444,
+    "crop": "eval/dataset/crops/medium-01-crosswalk-approach_t3.38_p0.jpg",
+    "groundTruth": "QQV4H45",
+    "legible": false,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "medium-01-crosswalk-approach_t6.38_p0",
+    "clip": "eval/footage/medium-01-crosswalk-approach.mp4",
+    "time": 6.38,
+    "box": {
+      "x1": 1065,
+      "y1": 636,
+      "x2": 1142,
+      "y2": 668
+    },
+    "plateWidthPx": 77,
+    "detectorScore": 0.653,
+    "crop": "eval/dataset/crops/medium-01-crosswalk-approach_t6.38_p0.jpg",
+    "groundTruth": "QQV4H45",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "medium-01-crosswalk-approach_t7.13_p0",
+    "clip": "eval/footage/medium-01-crosswalk-approach.mp4",
+    "time": 7.13,
+    "box": {
+      "x1": 1048,
+      "y1": 676,
+      "x2": 1145,
+      "y2": 709
+    },
+    "plateWidthPx": 97,
+    "detectorScore": 0.732,
+    "crop": "eval/dataset/crops/medium-01-crosswalk-approach_t7.13_p0.jpg",
+    "groundTruth": "QQV4H45",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "medium-01-crosswalk-approach_t7.88_p0",
+    "clip": "eval/footage/medium-01-crosswalk-approach.mp4",
+    "time": 7.88,
+    "box": {
+      "x1": 1034,
+      "y1": 712,
+      "x2": 1146,
+      "y2": 748
+    },
+    "plateWidthPx": 113,
+    "detectorScore": 0.79,
+    "crop": "eval/dataset/crops/medium-01-crosswalk-approach_t7.88_p0.jpg",
+    "groundTruth": "QQV4H45",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "medium-01-crosswalk-approach_t8.63_p0",
+    "clip": "eval/footage/medium-01-crosswalk-approach.mp4",
+    "time": 8.63,
+    "box": {
+      "x1": 998,
+      "y1": 764,
+      "x2": 1133,
+      "y2": 807
+    },
+    "plateWidthPx": 135,
+    "detectorScore": 0.825,
+    "crop": "eval/dataset/crops/medium-01-crosswalk-approach_t8.63_p0.jpg",
+    "groundTruth": "QQV4H45",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "medium-01-crosswalk-approach_t9.38_p0",
+    "clip": "eval/footage/medium-01-crosswalk-approach.mp4",
+    "time": 9.38,
+    "box": {
+      "x1": 1066,
+      "y1": 854,
+      "x2": 1230,
+      "y2": 904
+    },
+    "plateWidthPx": 164,
+    "detectorScore": 0.818,
+    "crop": "eval/dataset/crops/medium-01-crosswalk-approach_t9.38_p0.jpg",
+    "groundTruth": "QQV4H45",
+    "legible": false,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "medium-01-crosswalk-approach_t10.14_p0",
+    "clip": "eval/footage/medium-01-crosswalk-approach.mp4",
+    "time": 10.14,
+    "box": {
+      "x1": 1441,
+      "y1": 976,
+      "x2": 1632,
+      "y2": 1028
+    },
+    "plateWidthPx": 191,
+    "detectorScore": 0.832,
+    "crop": "eval/dataset/crops/medium-01-crosswalk-approach_t10.14_p0.jpg",
+    "groundTruth": null,
+    "legible": false,
+    "notes": "No readable plate — detector false positive or unresolvable.",
+    "noPlate": true,
+    "split": "holdout"
+  },
+  {
+    "id": "medium-01-crosswalk-approach_t11.64_p0",
+    "clip": "eval/footage/medium-01-crosswalk-approach.mp4",
+    "time": 11.64,
+    "box": {
+      "x1": 1389,
+      "y1": 824,
+      "x2": 1464,
+      "y2": 867
+    },
+    "plateWidthPx": 75,
+    "detectorScore": 0.406,
+    "crop": "eval/dataset/crops/medium-01-crosswalk-approach_t11.64_p0.jpg",
+    "groundTruth": null,
+    "legible": false,
+    "notes": "No readable plate — detector false positive or unresolvable.",
+    "noPlate": true,
+    "split": "holdout"
+  },
+  {
+    "id": "medium-02-dashcam-suburban_t4.50_p0",
+    "clip": "eval/footage/medium-02-dashcam-suburban.mp4",
+    "time": 4.5,
+    "box": {
+      "x1": 850,
+      "y1": 770,
+      "x2": 924,
+      "y2": 806
+    },
+    "plateWidthPx": 74,
+    "detectorScore": 0.721,
+    "crop": "eval/dataset/crops/medium-02-dashcam-suburban_t4.50_p0.jpg",
+    "groundTruth": "CJFV629",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "medium-02-dashcam-suburban_t4.50_p1",
+    "clip": "eval/footage/medium-02-dashcam-suburban.mp4",
+    "time": 4.5,
+    "box": {
+      "x1": 1265,
+      "y1": 796,
+      "x2": 1310,
+      "y2": 821
+    },
+    "plateWidthPx": 45,
+    "detectorScore": 0.4,
+    "crop": "eval/dataset/crops/medium-02-dashcam-suburban_t4.50_p1.jpg",
+    "groundTruth": null,
+    "legible": false,
+    "notes": "No readable plate — detector false positive or unresolvable.",
+    "noPlate": true,
+    "split": "holdout"
+  },
+  {
+    "id": "medium-02-dashcam-suburban_t5.10_p0",
+    "clip": "eval/footage/medium-02-dashcam-suburban.mp4",
+    "time": 5.1,
+    "box": {
+      "x1": 1622,
+      "y1": 746,
+      "x2": 1697,
+      "y2": 786
+    },
+    "plateWidthPx": 75,
+    "detectorScore": 0.814,
+    "crop": "eval/dataset/crops/medium-02-dashcam-suburban_t5.10_p0.jpg",
+    "groundTruth": "DAYH415",
+    "legible": false,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "medium-02-dashcam-suburban_t5.10_p1",
+    "clip": "eval/footage/medium-02-dashcam-suburban.mp4",
+    "time": 5.1,
+    "box": {
+      "x1": 849,
+      "y1": 771,
+      "x2": 926,
+      "y2": 807
+    },
+    "plateWidthPx": 76,
+    "detectorScore": 0.741,
+    "crop": "eval/dataset/crops/medium-02-dashcam-suburban_t5.10_p1.jpg",
+    "groundTruth": "CJFV629",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "medium-02-dashcam-suburban_t5.70_p0",
+    "clip": "eval/footage/medium-02-dashcam-suburban.mp4",
+    "time": 5.7,
+    "box": {
+      "x1": 854,
+      "y1": 775,
+      "x2": 929,
+      "y2": 813
+    },
+    "plateWidthPx": 75,
+    "detectorScore": 0.791,
+    "crop": "eval/dataset/crops/medium-02-dashcam-suburban_t5.70_p0.jpg",
+    "groundTruth": "CJFV629",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "medium-02-dashcam-suburban_t5.70_p1",
+    "clip": "eval/footage/medium-02-dashcam-suburban.mp4",
+    "time": 5.7,
+    "box": {
+      "x1": 1660,
+      "y1": 752,
+      "x2": 1740,
+      "y2": 794
+    },
+    "plateWidthPx": 80,
+    "detectorScore": 0.75,
+    "crop": "eval/dataset/crops/medium-02-dashcam-suburban_t5.70_p1.jpg",
+    "groundTruth": "DAYH415",
+    "legible": false,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "medium-02-dashcam-suburban_t6.30_p0",
+    "clip": "eval/footage/medium-02-dashcam-suburban.mp4",
+    "time": 6.3,
+    "box": {
+      "x1": 894,
+      "y1": 755,
+      "x2": 944,
+      "y2": 782
+    },
+    "plateWidthPx": 51,
+    "detectorScore": 0.411,
+    "crop": "eval/dataset/crops/medium-02-dashcam-suburban_t6.30_p0.jpg",
+    "groundTruth": "CJFV629",
+    "legible": false,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "medium-02-dashcam-suburban_t9.30_p0",
+    "clip": "eval/footage/medium-02-dashcam-suburban.mp4",
+    "time": 9.3,
+    "box": {
+      "x1": 1756,
+      "y1": 895,
+      "x2": 1845,
+      "y2": 943
+    },
+    "plateWidthPx": 89,
+    "detectorScore": 0.784,
+    "crop": "eval/dataset/crops/medium-02-dashcam-suburban_t9.30_p0.jpg",
+    "groundTruth": null,
+    "legible": false,
+    "notes": "No readable plate — detector false positive or unresolvable.",
+    "noPlate": true,
+    "split": "holdout"
+  },
+  {
+    "id": "medium-02-dashcam-suburban_t11.70_p0",
+    "clip": "eval/footage/medium-02-dashcam-suburban.mp4",
+    "time": 11.7,
+    "box": {
+      "x1": 891,
+      "y1": 725,
+      "x2": 990,
+      "y2": 774
+    },
+    "plateWidthPx": 98,
+    "detectorScore": 0.737,
+    "crop": "eval/dataset/crops/medium-02-dashcam-suburban_t11.70_p0.jpg",
+    "groundTruth": "CYNF712",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "medium-02-dashcam-suburban_t11.70_p1",
+    "clip": "eval/footage/medium-02-dashcam-suburban.mp4",
+    "time": 11.7,
+    "box": {
+      "x1": 68,
+      "y1": 729,
+      "x2": 154,
+      "y2": 767
+    },
+    "plateWidthPx": 86,
+    "detectorScore": 0.7,
+    "crop": "eval/dataset/crops/medium-02-dashcam-suburban_t11.70_p1.jpg",
+    "groundTruth": "DADB948",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  },
+  {
+    "id": "medium-02-dashcam-suburban_t11.70_p2",
+    "clip": "eval/footage/medium-02-dashcam-suburban.mp4",
+    "time": 11.7,
+    "box": {
+      "x1": 1744,
+      "y1": 808,
+      "x2": 1809,
+      "y2": 843
+    },
+    "plateWidthPx": 65,
+    "detectorScore": 0.334,
+    "crop": "eval/dataset/crops/medium-02-dashcam-suburban_t11.70_p2.jpg",
+    "groundTruth": "CJMB881",
+    "legible": true,
+    "notes": "",
+    "split": "holdout"
+  }
+]

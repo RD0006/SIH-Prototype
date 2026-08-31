@@ -1,0 +1,460 @@
+[
+  {
+    "id": "india-01-bhopal-bridge_t2.63_p0",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 2.63,
+    "box": {
+      "x1": 128,
+      "y1": 853,
+      "x2": 228,
+      "y2": 886
+    },
+    "plateWidthPx": 100,
+    "detectorScore": 0.581,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t2.63_p0.jpg",
+    "groundTruth": "MP04CQ0991",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-01-bhopal-bridge_t3.21_p0",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 3.21,
+    "box": {
+      "x1": 39,
+      "y1": 835,
+      "x2": 130,
+      "y2": 867
+    },
+    "plateWidthPx": 91,
+    "detectorScore": 0.503,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t3.21_p0.jpg",
+    "groundTruth": "MP04CQ0991",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-01-bhopal-bridge_t3.21_p1",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 3.21,
+    "box": {
+      "x1": 1120,
+      "y1": 835,
+      "x2": 1191,
+      "y2": 866
+    },
+    "plateWidthPx": 71,
+    "detectorScore": 0.473,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t3.21_p1.jpg",
+    "groundTruth": "MP04ZN2562",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-01-bhopal-bridge_t3.79_p0",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 3.79,
+    "box": {
+      "x1": 948,
+      "y1": 832,
+      "x2": 1035,
+      "y2": 868
+    },
+    "plateWidthPx": 87,
+    "detectorScore": 0.677,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t3.79_p0.jpg",
+    "groundTruth": "MP04ZN2562",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-01-bhopal-bridge_t4.96_p0",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 4.96,
+    "box": {
+      "x1": 635,
+      "y1": 847,
+      "x2": 723,
+      "y2": 884
+    },
+    "plateWidthPx": 88,
+    "detectorScore": 0.525,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t4.96_p0.jpg",
+    "groundTruth": "MP04ZN2562",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-01-bhopal-bridge_t5.54_p0",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 5.54,
+    "box": {
+      "x1": 1479,
+      "y1": 950,
+      "x2": 1569,
+      "y2": 993
+    },
+    "plateWidthPx": 90,
+    "detectorScore": 0.694,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t5.54_p0.jpg",
+    "groundTruth": "MP09WF8336",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-01-bhopal-bridge_t5.54_p1",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 5.54,
+    "box": {
+      "x1": 489,
+      "y1": 849,
+      "x2": 586,
+      "y2": 889
+    },
+    "plateWidthPx": 97,
+    "detectorScore": 0.537,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t5.54_p1.jpg",
+    "groundTruth": "MP04ZN2562",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-01-bhopal-bridge_t6.13_p0",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 6.13,
+    "box": {
+      "x1": 1240,
+      "y1": 952,
+      "x2": 1332,
+      "y2": 992
+    },
+    "plateWidthPx": 92,
+    "detectorScore": 0.66,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t6.13_p0.jpg",
+    "groundTruth": "MP09WF8336",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-01-bhopal-bridge_t6.71_p0",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 6.71,
+    "box": {
+      "x1": 1003,
+      "y1": 933,
+      "x2": 1095,
+      "y2": 975
+    },
+    "plateWidthPx": 92,
+    "detectorScore": 0.66,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t6.71_p0.jpg",
+    "groundTruth": "MP09WF8336",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-01-bhopal-bridge_t6.71_p1",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 6.71,
+    "box": {
+      "x1": 192,
+      "y1": 830,
+      "x2": 267,
+      "y2": 863
+    },
+    "plateWidthPx": 76,
+    "detectorScore": 0.467,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t6.71_p1.jpg",
+    "groundTruth": "MP04ZN2562",
+    "legible": false,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-01-bhopal-bridge_t7.29_p0",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 7.29,
+    "box": {
+      "x1": 790,
+      "y1": 907,
+      "x2": 890,
+      "y2": 947
+    },
+    "plateWidthPx": 100,
+    "detectorScore": 0.742,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t7.29_p0.jpg",
+    "groundTruth": "MP09WF8336",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-01-bhopal-bridge_t7.88_p0",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 7.88,
+    "box": {
+      "x1": 610,
+      "y1": 885,
+      "x2": 717,
+      "y2": 928
+    },
+    "plateWidthPx": 107,
+    "detectorScore": 0.634,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t7.88_p0.jpg",
+    "groundTruth": "MP09WF8336",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-01-bhopal-bridge_t9.04_p0",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 9.04,
+    "box": {
+      "x1": 295,
+      "y1": 862,
+      "x2": 384,
+      "y2": 898
+    },
+    "plateWidthPx": 89,
+    "detectorScore": 0.66,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t9.04_p0.jpg",
+    "groundTruth": "MP09WF8336",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-01-bhopal-bridge_t9.63_p0",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 9.63,
+    "box": {
+      "x1": 141,
+      "y1": 855,
+      "x2": 218,
+      "y2": 896
+    },
+    "plateWidthPx": 78,
+    "detectorScore": 0.735,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t9.63_p0.jpg",
+    "groundTruth": "MP09WF8336",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-01-bhopal-bridge_t10.21_p0",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 10.21,
+    "box": {
+      "x1": 0,
+      "y1": 859,
+      "x2": 54,
+      "y2": 895
+    },
+    "plateWidthPx": 55,
+    "detectorScore": 0.631,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t10.21_p0.jpg",
+    "groundTruth": null,
+    "legible": false,
+    "notes": "Detector clipped the plate — only the tail is inside the box.",
+    "noPlate": true,
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-01-bhopal-bridge_t12.54_p0",
+    "clip": "eval/footage/india-01-bhopal-bridge.mp4",
+    "time": 12.54,
+    "box": {
+      "x1": 1523,
+      "y1": 1051,
+      "x2": 1597,
+      "y2": 1080
+    },
+    "plateWidthPx": 74,
+    "detectorScore": 0.365,
+    "crop": "eval/dataset/crops/india-01-bhopal-bridge_t12.54_p0.jpg",
+    "groundTruth": null,
+    "legible": false,
+    "notes": "No plate in this crop.",
+    "noPlate": true,
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-02-pune-jm-road_t2.81_p0",
+    "clip": "eval/footage/india-02-pune-jm-road.mp4",
+    "time": 2.81,
+    "box": {
+      "x1": 1730,
+      "y1": 875,
+      "x2": 1842,
+      "y2": 930
+    },
+    "plateWidthPx": 112,
+    "detectorScore": 0.796,
+    "crop": "eval/dataset/crops/india-02-pune-jm-road_t2.81_p0.jpg",
+    "groundTruth": null,
+    "legible": false,
+    "notes": "Plate present but motion-blurred beyond human legibility.",
+    "noPlate": true,
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-02-pune-jm-road_t5.94_p0",
+    "clip": "eval/footage/india-02-pune-jm-road.mp4",
+    "time": 5.94,
+    "box": {
+      "x1": 1774,
+      "y1": 822,
+      "x2": 1861,
+      "y2": 861
+    },
+    "plateWidthPx": 87,
+    "detectorScore": 0.721,
+    "crop": "eval/dataset/crops/india-02-pune-jm-road_t5.94_p0.jpg",
+    "groundTruth": "MH24BR1519",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-02-pune-jm-road_t6.56_p0",
+    "clip": "eval/footage/india-02-pune-jm-road.mp4",
+    "time": 6.56,
+    "box": {
+      "x1": 1526,
+      "y1": 847,
+      "x2": 1606,
+      "y2": 886
+    },
+    "plateWidthPx": 80,
+    "detectorScore": 0.425,
+    "crop": "eval/dataset/crops/india-02-pune-jm-road_t6.56_p0.jpg",
+    "groundTruth": "MH24BR1519",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-02-pune-jm-road_t9.06_p0",
+    "clip": "eval/footage/india-02-pune-jm-road.mp4",
+    "time": 9.06,
+    "box": {
+      "x1": 1749,
+      "y1": 880,
+      "x2": 1875,
+      "y2": 936
+    },
+    "plateWidthPx": 126,
+    "detectorScore": 0.739,
+    "crop": "eval/dataset/crops/india-02-pune-jm-road_t9.06_p0.jpg",
+    "groundTruth": null,
+    "legible": false,
+    "notes": "Motion-blurred beyond human legibility.",
+    "noPlate": true,
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-02-pune-jm-road_t9.69_p0",
+    "clip": "eval/footage/india-02-pune-jm-road.mp4",
+    "time": 9.69,
+    "box": {
+      "x1": 1181,
+      "y1": 942,
+      "x2": 1252,
+      "y2": 1003
+    },
+    "plateWidthPx": 71,
+    "detectorScore": 0.409,
+    "crop": "eval/dataset/crops/india-02-pune-jm-road_t9.69_p0.jpg",
+    "groundTruth": null,
+    "legible": false,
+    "notes": "Motion-blurred beyond human legibility.",
+    "noPlate": true,
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-02-pune-jm-road_t10.31_p0",
+    "clip": "eval/footage/india-02-pune-jm-road.mp4",
+    "time": 10.31,
+    "box": {
+      "x1": 1579,
+      "y1": 937,
+      "x2": 1813,
+      "y2": 1002
+    },
+    "plateWidthPx": 234,
+    "detectorScore": 0.468,
+    "crop": "eval/dataset/crops/india-02-pune-jm-road_t10.31_p0.jpg",
+    "groundTruth": null,
+    "legible": false,
+    "notes": "Decorative name plate (\"SAMEER\"), not a registration — detector false positive.",
+    "noPlate": true,
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-02-pune-jm-road_t10.94_p0",
+    "clip": "eval/footage/india-02-pune-jm-road.mp4",
+    "time": 10.94,
+    "box": {
+      "x1": 1482,
+      "y1": 891,
+      "x2": 1675,
+      "y2": 952
+    },
+    "plateWidthPx": 194,
+    "detectorScore": 0.407,
+    "crop": "eval/dataset/crops/india-02-pune-jm-road_t10.94_p0.jpg",
+    "groundTruth": null,
+    "legible": false,
+    "notes": "Decorative name plate (\"SAMEER\"), not a registration — detector false positive.",
+    "noPlate": true,
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-02-pune-jm-road_t12.19_p0",
+    "clip": "eval/footage/india-02-pune-jm-road.mp4",
+    "time": 12.19,
+    "box": {
+      "x1": 1798,
+      "y1": 902,
+      "x2": 1920,
+      "y2": 984
+    },
+    "plateWidthPx": 123,
+    "detectorScore": 0.671,
+    "crop": "eval/dataset/crops/india-02-pune-jm-road_t12.19_p0.jpg",
+    "groundTruth": null,
+    "legible": false,
+    "notes": "Detector clipped the plate — right-hand characters outside the box.",
+    "noPlate": true,
+    "split": "india-holdout"
+  },
+  {
+    "id": "india-02-pune-jm-road_t14.06_p0",
+    "clip": "eval/footage/india-02-pune-jm-road.mp4",
+    "time": 14.06,
+    "box": {
+      "x1": 1577,
+      "y1": 742,
+      "x2": 1656,
+      "y2": 775
+    },
+    "plateWidthPx": 79,
+    "detectorScore": 0.579,
+    "crop": "eval/dataset/crops/india-02-pune-jm-road_t14.06_p0.jpg",
+    "groundTruth": "MH12MV1636",
+    "legible": true,
+    "notes": "",
+    "split": "india-holdout"
+  }
+]

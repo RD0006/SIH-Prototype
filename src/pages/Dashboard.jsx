@@ -1,15 +1,81 @@
+import { useMemo } from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router";
 
 import StatCard from "../components/dashboard/StatCard";
 import PriorityIncidents from "../components/dashboard/PriorityIncidents";
-import OperationalMap from "../components/dashboard/OperationalMap";
-
-import {
-  dashboardStats,
-  priorityIncidents,
-} from "../data/dashboard";
+import SectorMap from "../components/tracking/SectorMap";
+import { useSystem } from "../context/systemStore";
+import { STATUS } from "../lib/detection/status";
 
 export default function Dashboard() {
+  const { stats, incidents, cameras, targets, engine } = useSystem();
+
+  // The four headline figures, derived from live state rather than fixed text.
+  const dashboardStats = useMemo(
+    () => [
+      {
+        label: "Total Cameras",
+        value: String(stats.totalCameras).padStart(2, "0"),
+        detail: "Across active sector",
+      },
+      {
+        label: "Online",
+        value: String(stats.online).padStart(2, "0"),
+        detail:
+          stats.offline + stats.degraded === 0
+            ? "Full estate reporting"
+            : `${stats.offline} offline · ${stats.degraded} degraded`,
+      },
+      {
+        label: "Active Incidents",
+        value: String(stats.openIncidents).padStart(2, "0"),
+        detail: `${stats.highPriority} high priority`,
+      },
+      {
+        label: "Detections",
+        value: String(stats.detections),
+        detail:
+          stats.detections === 0
+            ? "Start the console to begin"
+            : `${stats.suppressed} suppressed as non-threat`,
+      },
+    ],
+    [stats],
+  );
+
+  // Highest-scoring open incidents, newest first among equals.
+  const priorityIncidents = useMemo(
+    () =>
+      [...incidents]
+        .filter(
+          (incident) =>
+            incident.status !== "resolved" && incident.status !== "suppressed",
+        )
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 5)
+        .map((incident) => ({
+          id: incident.id,
+          title: incident.title,
+          location: incident.zoneId
+            ? incident.zoneId.replace(/^zone-/, "").replace(/-/g, " ")
+            : "Sector Alpha",
+          camera: incident.cameraId,
+          score: incident.score,
+          severity: incident.severity,
+          time: incident.clock,
+        })),
+    [incidents],
+  );
+
+  const activeTarget = useMemo(
+    () =>
+      [...targets]
+        .filter((target) => target.status === "active")
+        .sort((a, b) => b.threat - a.threat)[0] ?? null,
+    [targets],
+  );
+
   return (
     <motion.div
       initial={{
@@ -47,6 +113,14 @@ export default function Dashboard() {
           <p className="mt-1 text-xs text-slate-500">
             30 Aug 2026 · 21:47:32
           </p>
+
+          <p className="mt-1 text-[10px] text-slate-700">
+            {engine.status === STATUS.READY
+              ? "Analytics engine running"
+              : engine.status === STATUS.FALLBACK
+                ? "Analytics engine in replay"
+                : "Analytics engine idle"}
+          </p>
         </div>
       </div>
 
@@ -63,7 +137,11 @@ export default function Dashboard() {
 
       {/* Main section */}
       <div className="mt-5 grid grid-cols-[1.45fr_1fr] gap-5">
-        <OperationalMap />
+        <SectorMap
+          cameras={cameras}
+          target={activeTarget}
+          height="min-h-[390px]"
+        />
 
         <PriorityIncidents
           incidents={priorityIncidents}
@@ -83,9 +161,22 @@ export default function Dashboard() {
             </p>
           </div>
 
-          <span className="rounded-full border border-emerald-900/50 bg-emerald-950/20 px-2.5 py-1 text-[9px] tracking-wide text-emerald-400/80">
-            ALL SYSTEMS ACTIVE
-          </span>
+          {engine.status === STATUS.READY ? (
+            <span className="rounded-full border border-emerald-900/50 bg-emerald-950/20 px-2.5 py-1 text-[9px] tracking-wide text-emerald-400/80">
+              ALL SYSTEMS ACTIVE
+            </span>
+          ) : engine.status === STATUS.FALLBACK ? (
+            <span className="rounded-full border border-amber-900/50 bg-amber-950/20 px-2.5 py-1 text-[9px] tracking-wide text-amber-400/80">
+              REPLAY — ENGINE UNAVAILABLE
+            </span>
+          ) : (
+            <Link
+              to="/surveillance"
+              className="rounded-full border border-slate-800/70 px-2.5 py-1 text-[9px] tracking-wide text-slate-500 transition hover:text-slate-300"
+            >
+              PIPELINE IDLE — START CONSOLE
+            </Link>
+          )}
         </div>
 
         <div className="mt-5 grid grid-cols-5 gap-3">
@@ -105,7 +196,15 @@ export default function Dashboard() {
                   0{index + 1}
                 </span>
 
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400/70" />
+                <span
+                  className={`h-1.5 w-1.5 rounded-full ${
+                    engine.status === STATUS.READY
+                      ? "bg-emerald-400/70"
+                      : engine.status === STATUS.FALLBACK
+                        ? "bg-amber-400/70"
+                        : "bg-slate-700"
+                  }`}
+                />
               </div>
 
               <p className="text-xs text-slate-400">
