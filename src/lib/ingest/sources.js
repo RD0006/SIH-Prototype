@@ -31,6 +31,7 @@ export const SOURCE_KIND = {
   PROGRESSIVE: "progressive",
   MJPEG: "mjpeg",
   RTSP: "rtsp",
+  SNAPSHOT: "snapshot",
 };
 
 export const SOURCES = {
@@ -86,6 +87,15 @@ export const SOURCES = {
     analysable: "cors",
     live: true,
     note: "Displayed through an image element rather than a video element; frame rate is whatever the camera pushes.",
+  },
+
+  [SOURCE_KIND.SNAPSHOT]: {
+    label: "Snapshot camera",
+    detail: "A still image refreshed on an interval",
+    playable: true,
+    analysable: "cors",
+    live: true,
+    note: "How most transport-authority cameras publish. Frames are polled at the provider's stated interval and never faster.",
   },
 
   [SOURCE_KIND.RTSP]: {

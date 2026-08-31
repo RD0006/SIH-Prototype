@@ -46,6 +46,9 @@ export async function attachSource(video, source, onHealth) {
     case SOURCE_KIND.UPLOAD:
       return attachFile(video, source, report);
 
+    case SOURCE_KIND.SNAPSHOT:
+      return attachSnapshot(video, source, report);
+
     default:
       return attachDirect(video, source, report);
   }
@@ -222,6 +225,109 @@ async function attachFile(video, source, report) {
     URL.revokeObjectURL(url);
     video.removeAttribute("src");
     video.load();
+  };
+}
+
+/**
+ * A camera that publishes stills rather than video.
+ *
+ * Most transport-authority cameras work this way: a JPEG at a fixed URL,
+ * replaced every minute or so. Rather than teach the whole pipeline about
+ * images, the poller paints each fetched frame onto a canvas and exposes that
+ * canvas as a MediaStream. Everything downstream — the analytics loop, the
+ * tracker, the plate engine — sees an ordinary video and needs no change.
+ *
+ * The interval is the provider's, not ours. Polling a public authority's
+ * camera faster than it updates gains nothing and is exactly the behaviour
+ * that gets a client blocked.
+ */
+async function attachSnapshot(video, source, report) {
+  const intervalMs = Math.max(5, source.refreshSeconds ?? 60) * 1000;
+
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d", { willReadFrequently: true });
+
+  let stopped = false;
+  let consecutiveFailures = 0;
+  let timer = null;
+
+  async function pull() {
+    if (stopped) {
+      return;
+    }
+
+    try {
+      // Cache-bust so we get the current frame rather than a stored one,
+      // and request CORS so the pixels come back readable.
+      const url = new URL(source.url);
+
+      url.searchParams.set("_t", String(Date.now()));
+
+      const image = new Image();
+
+      image.crossOrigin = "anonymous";
+
+      await new Promise((resolve, reject) => {
+        image.onload = resolve;
+        image.onerror = () => reject(new Error("image failed to load"));
+        image.src = url.toString();
+      });
+
+      if (stopped) {
+        return;
+      }
+
+      if (canvas.width !== image.naturalWidth) {
+        canvas.width = image.naturalWidth;
+        canvas.height = image.naturalHeight;
+      }
+
+      context.drawImage(image, 0, 0);
+
+      consecutiveFailures = 0;
+
+      report(
+        HEALTH.LIVE,
+        `${image.naturalWidth}x${image.naturalHeight} still, refreshed every ${intervalMs / 1000}s`,
+      );
+    } catch {
+      consecutiveFailures += 1;
+
+      // One miss is weather; several in a row means the camera is gone.
+      if (consecutiveFailures >= 3) {
+        report(
+          HEALTH.ERROR,
+          `No image for ${consecutiveFailures} consecutive attempts — the camera may have been retired or moved.`,
+        );
+      } else {
+        report(HEALTH.STALLED, "Missed a refresh, retrying.");
+      }
+    }
+  }
+
+  await pull();
+
+  if (!canvas.width) {
+    report(HEALTH.ERROR, "The camera returned no usable image.");
+
+    throw new Error("snapshot unavailable");
+  }
+
+  // 1 fps is ample: the underlying picture changes far more slowly.
+  const stream = canvas.captureStream(1);
+
+  video.srcObject = stream;
+  video.muted = true;
+
+  await video.play().catch(() => {});
+
+  timer = setInterval(pull, intervalMs);
+
+  return () => {
+    stopped = true;
+    clearInterval(timer);
+    stream.getTracks().forEach((track) => track.stop());
+    video.srcObject = null;
   };
 }
 

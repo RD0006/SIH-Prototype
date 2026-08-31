@@ -11,6 +11,7 @@ import Incidents from "./pages/Incidents";
 import Tracking from "./pages/Tracking";
 import BorderMap from "./pages/Map";
 import Evidence from "./pages/Evidence";
+import CameraLibrary from "./pages/CameraLibrary";
 import SystemStatus from "./pages/SystemStatus";
 
 import "./index.css";
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "evidence",
         element: <Evidence />,
+      },
+      {
+        path: "cameras",
+        element: <CameraLibrary />,
       },
       {
         path: "system",

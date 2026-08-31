@@ -36,6 +36,7 @@ Requires Node.js 20.19+ or 22.12+.
 | `src/lib/analytics/` | Domain classes, geometry, tracker, threat scoring |
 | `src/lib/alpr/` | The plate-recognition engine — detection, quality gating, recognition, validation, aggregation |
 | `src/lib/ingest/` | Video sources — validation, connection, health, and honest reporting of what can be analysed |
+| `src/lib/cameras/` | Camera registry and provider adapters for officially published public feeds |
 | `eval/` | Evaluation harness, hand-labelled ground truth, parameter sweeps |
 | `src/hooks/useAnalytics.js` | The analytics loop that ties them together |
 | `src/context/` | Shared platform state |
@@ -53,6 +54,10 @@ flow. Read it before demonstrating.
 plate-recognition engine: architecture, why each model was chosen over the
 alternatives, measured accuracy, and — importantly — the conditions under which
 it has *not* been tested.
+
+[`docs/camera-library.md`](docs/camera-library.md) covers the authorised public
+camera registry: the authorisation boundary, the provider-adapter architecture,
+and the first integrated provider.
 
 [`docs/video-sources.md`](docs/video-sources.md) covers real-world video input:
 which source types genuinely work, why RTSP needs a gateway, and the CORS

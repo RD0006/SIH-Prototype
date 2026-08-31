@@ -8,6 +8,7 @@
  */
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useLocation } from "react-router";
 import { motion } from "motion/react";
 import {
   Eye,
@@ -39,6 +40,7 @@ export default function Surveillance() {
   const videoRef = useRef(null);
 
   const { engine, incidents } = useSystem();
+  const location = useLocation();
 
   const [cameraId, setCameraId] = useState(defaultCameraId);
   const [running, setRunning] = useState(false);
@@ -49,7 +51,20 @@ export default function Surveillance() {
   const [anpr, setAnpr] = useState(true);
 
   // An external source replaces the bundled camera entirely.
-  const [source, setSource] = useState({ kind: SOURCE_KIND.BUNDLED });
+  // A camera selected in the library arrives through router state.
+  const handedOver = location.state?.camera;
+
+  const [source, setSource] = useState(() =>
+    handedOver
+      ? {
+          kind: SOURCE_KIND.SNAPSHOT,
+          url: handedOver.accessUrl,
+          refreshSeconds: handedOver.refreshSeconds,
+          label: handedOver.name,
+          canAnalyse: handedOver.analysable,
+        }
+      : { kind: SOURCE_KIND.BUNDLED },
+  );
   const [health, setHealth] = useState(null);
   const [pixelAccess, setPixelAccess] = useState({ readable: true });
 
