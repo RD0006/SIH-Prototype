@@ -1,20 +1,25 @@
+import { useState } from "react";
 import { Outlet } from "react-router";
 
 import Sidebar from "./components/layout/Sidebar";
-import Header from "./components/layout/Header";
 
-export default function App() {
+function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <div className="min-h-screen bg-[#111418] text-slate-200">
-      <Sidebar />
+    <div className="flex min-h-screen bg-[#0b1014]">
+      <Sidebar
+        open={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
 
-      <div className="ml-64">
-        <Header />
+      <div className="min-w-0 flex-1">
+        
 
-        <main className="min-h-[calc(100vh-5rem)] p-8">
-          <Outlet />
-        </main>
+        <Outlet />
       </div>
     </div>
   );
 }
+
+export default App;

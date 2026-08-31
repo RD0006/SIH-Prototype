@@ -1,43 +1,65 @@
 import { motion } from "motion/react";
 
-export default function StatCard({
+function StatCard({
   label,
   value,
-  detail,
-  index = 0,
+  suffix,
+  change,
+  status = "neutral",
+  icon,
 }) {
+  const statusColors = {
+    neutral: "text-[#5fa9a3]",
+    warning: "text-[#d6a84f]",
+    danger: "text-[#d95c5c]",
+    success: "text-[#65a982]",
+  };
+
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-        y: 8,
-      }}
-      animate={{
-        opacity: 1,
-        y: 0,
-      }}
-      transition={{
-        duration: 0.35,
-        delay: index * 0.05,
-        ease: "easeOut",
-      }}
-      className="rounded-xl border border-slate-800/70 bg-[#171a1f] p-5"
+      whileHover={{ y: -2 }}
+      transition={{ duration: 0.2 }}
+      className="rounded-2xl border border-[#26343b] bg-[#11191f] p-5"
     >
-      <p className="text-xs text-slate-500">
-        {label}
-      </p>
+      <div className="flex items-start justify-between">
+        <div>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#718087]">
+            {label}
+          </p>
 
-      <div className="mt-3 flex items-end justify-between">
-        <p className="text-3xl font-semibold tracking-tight text-slate-100">
-          {value}
-        </p>
+          <div className="mt-3 flex items-baseline gap-1">
+            <span className="font-mono text-3xl font-semibold text-[#e7ecea]">
+              {value}
+            </span>
 
-        <span className="mb-1 h-1.5 w-1.5 rounded-full bg-emerald-400/70" />
+            {suffix && (
+              <span className="text-xs text-[#718087]">
+                {suffix}
+              </span>
+            )}
+          </div>
+        </div>
+
+        {icon && (
+          <div className={`${statusColors[status]} text-lg`}>
+            {icon}
+          </div>
+        )}
       </div>
 
-      <p className="mt-2 text-[11px] text-slate-600">
-        {detail}
-      </p>
+      {change && (
+        <div className="mt-4 flex items-center gap-2 text-xs">
+          <span className={statusColors[status]}>
+            {change}
+          </span>
+
+          <span className="text-[#718087]">
+            compared with previous period
+          </span>
+        </div>
+      )}
     </motion.div>
   );
 }
+
+export default StatCard;

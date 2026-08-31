@@ -1,124 +1,84 @@
-import { motion } from "motion/react";
-
+import LiveClock from "../components/dashboard/LiveClock";
 import StatCard from "../components/dashboard/StatCard";
+import BorderMap from "../components/dashboard/BorderMap";
 import PriorityIncidents from "../components/dashboard/PriorityIncidents";
-import OperationalMap from "../components/dashboard/OperationalMap";
+import Panel from "../components/ui/Panel";
+import IntelligencePipeline from "../components/dashboard/IntelligencePipeline";
 
-import {
-  dashboardStats,
-  priorityIncidents,
-} from "../data/dashboard";
-
-export default function Dashboard() {
+function Dashboard() {
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 0.35,
-      }}
-      className="mx-auto max-w-[1600px]"
-    >
-      {/* Page heading */}
-      <div className="mb-7 flex items-end justify-between">
+    <div className="min-h-screen bg-[#0b1014]">
+      <header className="flex flex-col gap-4 border-b border-[#26343b] px-4 py-5 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <div>
-          <p className="text-[10px] uppercase tracking-[0.2em] text-slate-600">
-            Border Sector Alpha
+          <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#65a982]">
+            Intelligent Border Video Analytics Platform
           </p>
 
-          <h1 className="mt-2 text-2xl font-semibold tracking-tight text-slate-100">
-            Surveillance Overview
+          <h1 className="mt-1 text-xl font-semibold tracking-tight text-[#e7ecea]">
+            Operational Overview
           </h1>
-
-          <p className="mt-1.5 text-xs text-slate-600">
-            Real-time intelligence from connected surveillance infrastructure.
-          </p>
         </div>
 
-        <div className="text-right">
-          <p className="text-[10px] uppercase tracking-wider text-slate-700">
-            Local Time
-          </p>
+        <LiveClock />
+      </header>
 
-          <p className="mt-1 text-xs text-slate-500">
-            30 Aug 2026 · 21:47:32
-          </p>
-        </div>
-      </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-4 gap-4">
-        {dashboardStats.map((stat, index) => (
+      <main className="space-y-6 p-4 sm:p-6 lg:p-8">
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4">
           <StatCard
-            key={stat.label}
-            {...stat}
-            index={index}
+            label="Cameras Online"
+            value="24"
+            suffix="/ 26"
+            change="+1"
+            status="success"
+            icon="◉"
           />
-        ))}
-      </div>
 
-      {/* Main section */}
-      <div className="mt-5 grid grid-cols-[1.45fr_1fr] gap-5">
-        <OperationalMap />
+          <StatCard
+            label="Active Alerts"
+            value="07"
+            change="+2"
+            status="warning"
+            icon="!"
+          />
 
-        <PriorityIncidents
-          incidents={priorityIncidents}
-        />
-      </div>
+          <StatCard
+            label="Priority Incidents"
+            value="03"
+            status="danger"
+            icon="!"
+          />
 
-      {/* Intelligence pipeline */}
-      <div className="mt-5 rounded-xl border border-slate-800/70 bg-[#171a1f] p-5">
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-sm font-medium text-slate-200">
-              Intelligence Pipeline
-            </h3>
-
-            <p className="mt-1 text-[11px] text-slate-600">
-              Current system processing status
-            </p>
-          </div>
-
-          <span className="rounded-full border border-emerald-900/50 bg-emerald-950/20 px-2.5 py-1 text-[9px] tracking-wide text-emerald-400/80">
-            ALL SYSTEMS ACTIVE
-          </span>
+          <StatCard
+            label="AI Engine"
+            value="98.7"
+            suffix="%"
+            change="+0.4%"
+            status="success"
+            icon="◆"
+          />
         </div>
 
-        <div className="mt-5 grid grid-cols-5 gap-3">
-          {[
-            "Video Ingestion",
-            "Object Detection",
-            "Target Tracking",
-            "Threat Assessment",
-            "Alert Prioritization",
-          ].map((stage, index) => (
-            <div
-              key={stage}
-              className="relative rounded-lg border border-slate-800/60 bg-[#14171b] p-4"
-            >
-              <div className="mb-3 flex items-center justify-between">
-                <span className="text-[9px] text-slate-700">
-                  0{index + 1}
-                </span>
+        <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_360px]">
+          <Panel
+            eyebrow="Live intelligence"
+            title="Border surveillance"
+          >
+            <BorderMap />
+          </Panel>
 
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400/70" />
-              </div>
+          <PriorityIncidents />
 
-              <p className="text-xs text-slate-400">
-                {stage}
-              </p>
-
-              {index < 4 && (
-                <div className="absolute -right-3 top-1/2 h-px w-3 bg-slate-800" />
-              )}
-            </div>
-          ))}
+          <IntelligencePipeline />
         </div>
-      </div>
-    </motion.div>
+
+        <div className="grid gap-6 lg:grid-cols-2">
+          {/* Camera activity */}
+
+          {/* Threat activity */}
+        </div>
+      </main>
+    </div>
   );
 }
+
+export default Dashboard;
