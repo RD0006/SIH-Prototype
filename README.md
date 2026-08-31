@@ -35,6 +35,7 @@ Requires Node.js 20.19+ or 22.12+.
 | `src/lib/detection/` | Model loading, low-light enhancement, replay fallback |
 | `src/lib/analytics/` | Domain classes, geometry, tracker, threat scoring |
 | `src/lib/alpr/` | The plate-recognition engine — detection, quality gating, recognition, validation, aggregation |
+| `src/lib/ingest/` | Video sources — validation, connection, health, and honest reporting of what can be analysed |
 | `eval/` | Evaluation harness, hand-labelled ground truth, parameter sweeps |
 | `src/hooks/useAnalytics.js` | The analytics loop that ties them together |
 | `src/context/` | Shared platform state |
@@ -52,6 +53,10 @@ flow. Read it before demonstrating.
 plate-recognition engine: architecture, why each model was chosen over the
 alternatives, measured accuracy, and — importantly — the conditions under which
 it has *not* been tested.
+
+[`docs/video-sources.md`](docs/video-sources.md) covers real-world video input:
+which source types genuinely work, why RTSP needs a gateway, and the CORS
+constraint that decides whether a stream can be analysed or only watched.
 
 ## Checks
 

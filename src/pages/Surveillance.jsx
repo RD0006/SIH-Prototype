@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 
 import EngineBadge from "../components/surveillance/EngineBadge";
+import SourcePicker from "../components/surveillance/SourcePicker";
 import DetectionOverlay from "../components/surveillance/DetectionOverlay";
 import PlatePanel from "../components/surveillance/PlatePanel";
 import { useAnalytics } from "../hooks/useAnalytics";
@@ -29,6 +30,8 @@ import { useSystem } from "../context/systemStore";
 import { cameras, defaultCameraId } from "../data/cameras";
 import { getZonesForCamera } from "../data/zones";
 import { QUALITY_PRESETS } from "../lib/detection/status";
+import { SOURCE_KIND } from "../lib/ingest/sources";
+import { attachSource, canReadPixels, HEALTH } from "../lib/ingest/attach";
 import { DOMAIN_COLOR } from "../lib/analytics/classes";
 import { describeSeverity } from "../lib/analytics/threat";
 
@@ -45,6 +48,11 @@ export default function Surveillance() {
   const [showTrails, setShowTrails] = useState(true);
   const [anpr, setAnpr] = useState(true);
 
+  // An external source replaces the bundled camera entirely.
+  const [source, setSource] = useState({ kind: SOURCE_KIND.BUNDLED });
+  const [health, setHealth] = useState(null);
+  const [pixelAccess, setPixelAccess] = useState({ readable: true });
+
   const camera = useMemo(
     () => cameras.find((item) => item.id === cameraId),
     [cameraId],
@@ -56,7 +64,7 @@ export default function Surveillance() {
     videoRef,
     camera,
     zones,
-    running,
+    running: running && pixelAccess.readable,
     quality,
     enhance,
     anpr,
@@ -73,7 +81,7 @@ export default function Surveillance() {
   useEffect(() => {
     const video = videoRef.current;
 
-    if (!video) {
+    if (!video || source.kind !== SOURCE_KIND.BUNDLED) {
       return;
     }
 
@@ -82,7 +90,61 @@ export default function Surveillance() {
     } else {
       video.pause();
     }
-  }, [running, cameraId]);
+  }, [running, cameraId, source.kind]);
+
+  // Attach whatever external source is selected, and tear it down cleanly when
+  // it changes. Detaching matters more than attaching: a camera left running
+  // holds the device open and keeps its indicator lit.
+  useEffect(() => {
+    if (source.kind === SOURCE_KIND.BUNDLED) {
+      setHealth(null);
+      setPixelAccess({ readable: true });
+
+      return undefined;
+    }
+
+    const video = videoRef.current;
+
+    if (!video) {
+      return undefined;
+    }
+
+    let detach = null;
+    let cancelled = false;
+
+    attachSource(video, source, (state) => {
+      if (!cancelled) {
+        setHealth(state);
+      }
+    })
+      .then((teardown) => {
+        if (cancelled) {
+          teardown?.();
+
+          return;
+        }
+
+        detach = teardown;
+        resetTracks();
+
+        // Headers predict pixel access; the frame proves it. Check once the
+        // stream is actually producing something.
+        const verify = () => {
+          if (!cancelled && video.readyState >= 2) {
+            setPixelAccess(canReadPixels(video));
+          }
+        };
+
+        video.addEventListener("loadeddata", verify, { once: true });
+        setTimeout(verify, 1500);
+      })
+      .catch(() => {});
+
+    return () => {
+      cancelled = true;
+      detach?.();
+    };
+  }, [source, resetTracks]);
 
   const liveIncidents = useMemo(
     () => incidents.filter((incident) => incident.live).slice(0, 6),
@@ -118,52 +180,18 @@ export default function Surveillance() {
       </div>
 
       <div className="grid grid-cols-[15rem_1fr_20rem] gap-5">
-        {/* Camera estate */}
-        <div className="rounded-xl border border-slate-800/70 bg-[#171a1f] p-3">
-          <p className="px-2 pb-2 text-[10px] uppercase tracking-[0.18em] text-slate-600">
-            Cameras
-          </p>
+        {/* Source */}
+        <SourcePicker
+          cameras={cameras}
+          activeCameraId={cameraId}
+          onSelect={(next) => {
+            if (next.kind === SOURCE_KIND.BUNDLED) {
+              setCameraId(next.cameraId);
+            }
 
-          <div className="space-y-1">
-            {cameras.map((item) => {
-              const active = item.id === cameraId;
-
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => setCameraId(item.id)}
-                  className={`flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left transition-colors ${
-                    active
-                      ? "bg-slate-700/40 text-slate-100"
-                      : "text-slate-500 hover:bg-slate-800/40 hover:text-slate-300"
-                  }`}
-                >
-                  <span
-                    className={`h-1.5 w-1.5 shrink-0 rounded-full ${
-                      item.status === "online"
-                        ? "bg-emerald-400/80"
-                        : item.status === "degraded"
-                          ? "bg-amber-400/80"
-                          : "bg-slate-700"
-                    }`}
-                  />
-
-                  <span className="min-w-0 flex-1">
-                    <span className="block truncate text-xs">{item.id}</span>
-
-                    <span className="block truncate text-[10px] text-slate-600">
-                      {item.type === "bop"
-                        ? "Border Out Post"
-                        : item.type === "road"
-                          ? "Border Road"
-                          : "Check Post"}
-                    </span>
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
+            setSource(next);
+          }}
+        />
 
         {/* Feed */}
         <div>
@@ -182,11 +210,17 @@ export default function Surveillance() {
               <>
                 <video
                   ref={videoRef}
-                  key={camera.feed}
-                  src={camera.feed}
+                  key={
+                    source.kind === SOURCE_KIND.BUNDLED
+                      ? camera.feed
+                      : `${source.kind}-${source.url ?? source.deviceId ?? source.file?.name}`
+                  }
+                  src={
+                    source.kind === SOURCE_KIND.BUNDLED ? camera.feed : undefined
+                  }
                   className="block aspect-video w-full object-cover"
                   muted
-                  loop
+                  loop={source.kind === SOURCE_KIND.BUNDLED}
                   playsInline
                 />
 
@@ -214,12 +248,62 @@ export default function Surveillance() {
               )}
             </div>
 
-            <div className="pointer-events-none absolute right-3 top-3">
+            <div className="pointer-events-none absolute right-3 top-3 flex items-center gap-2">
+              {source.kind !== SOURCE_KIND.BUNDLED && health && (
+                <span
+                  className={`rounded px-2 py-1 text-[9px] tracking-wider ${
+                    health.health === HEALTH.LIVE
+                      ? "bg-emerald-950/70 text-emerald-300"
+                      : health.health === HEALTH.CONNECTING
+                        ? "bg-black/60 text-slate-300"
+                        : health.health === HEALTH.STALLED
+                          ? "bg-amber-950/70 text-amber-300"
+                          : "bg-red-950/70 text-red-300"
+                  }`}
+                >
+                  {health.health.toUpperCase()}
+                </span>
+              )}
+
               <span className="rounded bg-black/60 px-2 py-1 text-[9px] tracking-wider text-slate-400">
                 {tracks.length} TRACKED
               </span>
             </div>
           </div>
+
+          {/* Source status — the place bad news is delivered plainly */}
+          {source.kind !== SOURCE_KIND.BUNDLED && (
+            <div
+              className={`mt-3 rounded-xl border p-3 ${
+                !pixelAccess.readable
+                  ? "border-amber-900/50 bg-amber-950/20"
+                  : health?.health === HEALTH.ERROR
+                    ? "border-red-900/50 bg-red-950/20"
+                    : "border-slate-800/70 bg-[#171a1f]"
+              }`}
+            >
+              <p className="text-[11px] text-slate-300">
+                {!pixelAccess.readable
+                  ? "Preview only — analytics cannot run on this source"
+                  : health?.message ||
+                    `${source.kind.toUpperCase()} source connected`}
+              </p>
+
+              {!pixelAccess.readable && (
+                <p className="mt-1 text-[10px] leading-4 text-amber-300/70">
+                  {pixelAccess.reason}
+                </p>
+              )}
+
+              {pixelAccess.readable && health?.message && (
+                <p className="mt-1 text-[10px] leading-4 text-slate-600">
+                  Frames are readable, so detection, fences and plate
+                  recognition all run on this feed exactly as they do on the
+                  bundled clips.
+                </p>
+              )}
+            </div>
+          )}
 
           {/* Controls */}
           <div className="mt-3 flex flex-wrap items-center gap-2 rounded-xl border border-slate-800/70 bg-[#171a1f] p-3">
