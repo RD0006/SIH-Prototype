@@ -50,7 +50,7 @@ function Sidebar() {
         <div className="flex h-[76px] items-center justify-between border-b border-[#202b34] px-6">
           <div>
             <p className="text-sm font-semibold tracking-[0.18em] text-[#e7ecea]">
-              BORDER<span className="text-[#5fa9a3]">AI</span>
+              IB<span className="text-[#5fa9a3]">VAP</span>
             </p>
 
             <p className="mt-1 text-[9px] uppercase tracking-wider text-[#596b78]">
