@@ -1,155 +1,131 @@
+import { useState } from "react";
 import { NavLink } from "react-router";
-import { motion } from "motion/react";
 
 const navigation = [
   {
-    label: "Overview",
+    name: "Dashboard",
     path: "/",
-    icon: "⌂",
+    icon: "▦",
   },
   {
-    label: "Surveillance",
+    name: "Surveillance",
     path: "/surveillance",
     icon: "◉",
   },
   {
-    label: "Incidents",
+    name: "Incidents",
     path: "/incidents",
     icon: "!",
   },
 ];
 
-function Sidebar({ open, onClose }) {
+function Sidebar() {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
-      {/* Mobile overlay */}
+      {/* Mobile menu button */}
+      <button
+        onClick={() => setOpen(true)}
+        className="fixed left-4 top-4 z-[1100] flex h-10 w-10 items-center justify-center rounded-xl border border-[#26343b] bg-[#10171c] text-[#b7c4c8] shadow-lg lg:hidden"
+      >
+        ☰
+      </button>
+
+      {/* Mobile backdrop */}
       {open && (
         <div
-          className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden"
-          onClick={onClose}
+          onClick={() => setOpen(false)}
+          className="fixed inset-0 z-[1050] bg-black/50 backdrop-blur-sm lg:hidden"
         />
       )}
 
+      {/* Sidebar */}
       <aside
-        className={`
-          fixed inset-y-0 left-0 z-50
-          flex w-64 flex-col
-          border-r border-[#26343b]
-          bg-[#0d1419]
-          transition-transform duration-300
-          lg:static lg:translate-x-0
-          ${open ? "translate-x-0" : "-translate-x-full"}
-        `}
+        className={`fixed left-0 top-0 z-[1100] flex h-screen w-[250px] flex-col border-r border-[#202b34] bg-[#0d1318] transition-transform duration-300 lg:translate-x-0 ${
+          open ? "translate-x-0" : "-translate-x-full"
+        }`}
       >
-        {/* Brand */}
-        <div className="flex h-20 items-center justify-between border-b border-[#26343b] px-6">
+        {/* Logo */}
+        <div className="flex h-[76px] items-center justify-between border-b border-[#202b34] px-6">
           <div>
-            <div className="flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#65a982]/40 bg-[#65a982]/10">
-                <span className="text-sm text-[#65a982]">◆</span>
-              </div>
+            <p className="text-sm font-semibold tracking-[0.18em] text-[#e7ecea]">
+              BORDER<span className="text-[#5fa9a3]">AI</span>
+            </p>
 
-              <div>
-                <h1 className="text-sm font-bold tracking-[0.15em] text-[#e7ecea]">
-                  IBVAP
-                </h1>
-
-                <p className="text-[9px] uppercase tracking-[0.2em] text-[#718087]">
-                  Intelligence System
-                </p>
-              </div>
-            </div>
+            <p className="mt-1 text-[9px] uppercase tracking-wider text-[#596b78]">
+              Intelligent Surveillance
+            </p>
           </div>
 
           {/* Mobile close */}
           <button
-            onClick={onClose}
-            className="text-xl text-[#718087] hover:text-[#e7ecea] lg:hidden"
+            onClick={() => setOpen(false)}
+            className="flex h-8 w-8 items-center justify-center rounded-lg text-[#718087] hover:bg-[#182127] hover:text-[#e7ecea] lg:hidden"
           >
-            ×
+            ✕
           </button>
         </div>
 
         {/* Navigation */}
-        <nav className="flex-1 space-y-1 px-3 py-6">
-          <p className="mb-3 px-3 text-[9px] font-semibold uppercase tracking-[0.25em] text-[#718087]">
-            Operations
+        <nav className="flex-1 px-3 py-6">
+          <p className="mb-3 px-3 text-[9px] font-semibold uppercase tracking-[0.2em] text-[#465761]">
+            Navigation
           </p>
 
-          {navigation.map((item) => (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              onClick={onClose}
-              end={item.path === "/"}
-              className={({ isActive }) =>
-                `
-                group flex items-center gap-3 rounded-xl px-3 py-3
-                text-sm transition-all
-                ${
-                  isActive
-                    ? "bg-[#65a982]/10 text-[#65a982]"
-                    : "text-[#829096] hover:bg-[#172128] hover:text-[#e7ecea]"
+          <div className="space-y-1">
+            {navigation.map((item) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                onClick={() => setOpen(false)}
+                className={({ isActive }) =>
+                  `group flex items-center gap-3 rounded-xl px-3 py-3 text-sm transition-all ${
+                    isActive
+                      ? "border border-[#29434a] bg-[#172329] text-[#e7ecea]"
+                      : "border border-transparent text-[#718087] hover:bg-[#141d22] hover:text-[#cbd5d8]"
+                  }`
                 }
-                `
-              }
-            >
-              {({ isActive }) => (
-                <>
-                  <span
-                    className={`
-                      flex h-8 w-8 items-center justify-center rounded-lg
-                      text-sm
-                      ${
+              >
+                {({ isActive }) => (
+                  <>
+                    <span
+                      className={`flex h-8 w-8 items-center justify-center rounded-lg text-xs ${
                         isActive
-                          ? "bg-[#65a982]/15"
-                          : "bg-[#172128] group-hover:bg-[#26343b]"
-                      }
-                    `}
-                  >
-                    {item.icon}
-                  </span>
+                          ? "bg-[#20363b] text-[#70b8b0]"
+                          : "bg-[#151c21] text-[#596b73]"
+                      }`}
+                    >
+                      {item.icon}
+                    </span>
 
-                  <span>{item.label}</span>
+                    <span>{item.name}</span>
 
-                  {isActive && (
-                    <motion.span
-                      layoutId="active-nav"
-                      className="ml-auto h-1.5 w-1.5 rounded-full bg-[#65a982]"
-                    />
-                  )}
-                </>
-              )}
-            </NavLink>
-          ))}
+                    {isActive && (
+                      <span className="ml-auto h-1.5 w-1.5 rounded-full bg-[#5fa9a3] shadow-[0_0_8px_rgba(95,169,163,0.7)]" />
+                    )}
+                  </>
+                )}
+              </NavLink>
+            ))}
+          </div>
         </nav>
 
         {/* System status */}
-        <div className="border-t border-[#26343b] p-4">
-          <div className="rounded-xl border border-[#26343b] bg-[#11191f] p-4">
+        <div className="border-t border-[#202b34] p-4">
+          <div className="rounded-xl border border-[#20352f] bg-[#0c1a17] p-3">
             <div className="flex items-center gap-2">
-              <motion.span
-                animate={{ opacity: [1, 0.35, 1] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                }}
-                className="h-2 w-2 rounded-full bg-[#65a982]"
-              />
+              <span className="h-2 w-2 animate-pulse rounded-full bg-[#10b981] shadow-[0_0_8px_rgba(16,185,129,0.7)]" />
 
-              <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#65a982]">
-                System Operational
+              <span className="text-[9px] font-semibold uppercase tracking-wider text-[#8ba69f]">
+                System operational
               </span>
             </div>
 
-            <p className="mt-2 text-[10px] leading-relaxed text-[#718087]">
-              AI surveillance engine and camera network are operating normally.
+            <p className="mt-2 text-[8px] text-[#52645f]">
+              All intelligence services active
             </p>
           </div>
-
-          <p className="mt-4 text-center text-[9px] tracking-wider text-[#4f5d63]">
-            IBVAP (Intelligent Border Video Analytics Platform)
-          </p>
         </div>
       </aside>
     </>
